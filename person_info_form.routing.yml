@@ -1,0 +1,30 @@
+person_info_form.form:
+  path: '/person-info-form'
+  defaults:
+    _form: '\Drupal\person_info_form\Form\PersonInfoForm'
+    _title: 'Person Info Form'
+  requirements:
+    _permission: 'access content'
+person_info_form.admin_submissions:
+  path: '/admin/reports/person-info-submissions'
+  defaults:
+    _controller: '\Drupal\person_info_form\Controller\PersonInfoAdminController::report'
+    _title: 'Person Info Submissions'
+  requirements:
+    _permission: 'administer site configuration'
+person_info_form.delete_submission:
+  path: '/admin/reports/person-info-submissions/delete/{id}'
+  defaults:
+    _controller: '\Drupal\person_info_form\Controller\PersonInfoAdminController::deleteSubmission'
+    _title: 'Delete Submission'
+  requirements:
+    _permission: 'administer site configuration'
+    id: \d+
+person_info_form.delete_submission_confirm:
+  path: '/admin/reports/person-info-submissions/delete/confirm/{id}'
+  defaults:
+    _form: '\Drupal\person_info_form\Form\DeletePersonSubmissionConfirmForm'
+    _title: 'Confirm Delete'
+  requirements:
+    _permission: 'administer site configuration'
+    id: \d+

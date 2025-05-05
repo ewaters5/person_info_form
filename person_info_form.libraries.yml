@@ -1,0 +1,16 @@
+person_form_styles:
+  version: 1.x
+  css:
+    theme:
+      css/person_info_form.css: {}
+enhanced_multiselect:
+  version: 1.x
+  js:
+    libraries/choices/choices.min.js: {}
+    js/multiselect-init.js: {}
+  css:
+    theme:
+      libraries/choices/choices.min.css: {}
+  dependencies:
+    - core/drupal
+    - core/jquery

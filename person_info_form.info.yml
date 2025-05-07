@@ -1,7 +1,7 @@
 name: 'Person Info Form'
 type: module
 description: 'Custom module to collect basic user info via a responsive form.'
-core_version_requirement: ^10
+core_version_requirement: ^11 || ^10
 package: Custom
 dependencies:
   - field

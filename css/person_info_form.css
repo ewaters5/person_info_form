@@ -106,6 +106,7 @@ select#edit-phone-type
     appearance: none;
     padding-right: 3.5rem !important;
     cursor: pointer;
+    width: 100%;
 }
 select#edit-phone-type:hover
 {
@@ -163,6 +164,24 @@ select#edit-phone-type:hover
     border: none !important;
     margin-top: 25px !important;    
 }
+.person-info-form-wrapper .form-actions input 
+{
+    width: 100%;
+    height: 52px;
+    border-radius: 100px !important;
+    padding-top: 16px !important;
+    padding-right: 24px !important;
+    padding-bottom: 16px !important;
+    padding-left: 24px !important;
+    background-color: #00A3A4 !important;
+    font-weight: 400 !important;
+    font-size: 16px !important;
+    line-height: 100% !important;
+    border: none !important;
+    margin-top: 25px !important; 
+    color: #fff !important;   
+}
+
 .person-info-form-wrapper .form-actions button:hover
 {
     opacity: .9;
@@ -236,6 +255,11 @@ select#edit-phone-type:hover
     margin: 0;
     cursor: pointer;
 }
+.choices .choices__inner .choices__input:focus
+{
+    outline: none;
+}
+
 .choices .choices__inner .choices__input.placeholder-visible
 {
     font-size: 16px !important;

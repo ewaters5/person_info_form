@@ -109,7 +109,7 @@ class PersonInfoForm extends FormBase {
         'yellow' => $this->t('Yellow'),
         'other' => $this->t('Other'),
       ],
-      '#required' => TRUE,
+      // '#required' => TRUE,
       '#attributes' => ['class' => ['enhanced-multiselect']],
     ];
   
@@ -153,7 +153,7 @@ class PersonInfoForm extends FormBase {
     }
   
     // At least 2 favorite colors
-    $colors = $form_state->getValue('favorite_color');
+    $colors = $form_state->getValue('favorite_color') ?? [];
     if (count($colors) < 2) {
       $form_state->setErrorByName('favorite_color', $this->t('Please select at least two favorite colors.'));
     }

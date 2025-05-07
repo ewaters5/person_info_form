@@ -178,7 +178,7 @@ class PersonInfoForm extends FormBase {
         'phone_number' => $values['phone_number'],
         'favorite_color' => implode(', ', $values['favorite_color']),
         'agree' => $values['agree'] ?? 0,
-        'submitted' => REQUEST_TIME,
+        'submitted' => \Drupal::time()->getCurrentTime(),
       ])->execute();
 
     $this->messenger()->addStatus($this->t('Your information has been submitted.'));
